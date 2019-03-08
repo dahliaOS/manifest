@@ -5,8 +5,8 @@
   </imports>
   <projects>
     <project name="jiri"
-             path="go/src/fuchsia.googlesource.com/jiri"
-             remote="https://fuchsia.googlesource.com/jiri"
+             path="go/src/github.com/dahlia-os/jiri"
+             remote="https://github.com/dahlia-os/jiri"
              gerrithost="https://fuchsia-review.googlesource.com"
              githooks="manifest/git-hooks"/>
     <project name="jiri/third_party/git2go"
