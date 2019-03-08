@@ -5,7 +5,7 @@
          sub-dir so that this can be imported into other manifests that
          pull in manifest repos from multiple gerrit hosts. -->
     <project name="manifest/fuchsia"
-             remote="https://fuchsia.googlesource.com/manifest"
+             remote="github.com/dahlia-os/manifest"
              gerrithost="https://fuchsia-review.googlesource.com"
              githooks="manifest/fuchsia/git-hooks"
              path="manifest/fuchsia"/>
