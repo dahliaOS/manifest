@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <imports>
+    <localimport file="minimal"/>
+  </imports>
+  <projects>
+    <project name="rust-crates"
+             path="third_party/rust-crates"
+             remote="https://fuchsia.googlesource.com/third_party/rust-crates"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"/>
+    <project name="scripts"
+             path="scripts"
+             remote="https://fuchsia.googlesource.com/scripts/"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"/>
+  </projects>
+</manifest>

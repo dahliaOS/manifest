@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <imports>
+    <localimport file="../minimal"/>
+    <import remote="https://fuchsia.googlesource.com/build"
+            manifest="manifest/build"
+            name="build"/>
+  </imports>
+  <projects>
+    <project name="rust-crates"
+             path="third_party/rust-crates"
+             remote="https://fuchsia.googlesource.com/third_party/rust-crates"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"/>
+    <project name="third_party/cairo"
+             path="third_party/cairo"
+             remote="https://fuchsia.googlesource.com/third_party/cairo"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             historydepth="1"/>
+    <project name="third_party/cargo-vendor"
+             path="third_party/rust-mirrors/cargo-vendor"
+             remote="https://fuchsia.googlesource.com/third_party/cargo-vendor"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"/>
+    <project name="third_party/mio"
+             path="third_party/rust-mirrors/mio"
+             remote="https://fuchsia.googlesource.com/third_party/mio"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"/>
+    <project name="third_party/pixman"
+             path="third_party/pixman"
+             remote="https://fuchsia.googlesource.com/third_party/pixman"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             historydepth="1"/>
+    <project name="third_party/tokio-core"
+             path="third_party/rust-mirrors/tokio-core"
+             remote="https://fuchsia.googlesource.com/third_party/tokio-core"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"/>
+    <project name="third_party/rust-mirrors/rand"
+             path="third_party/rust-mirrors/rand"
+             remote="https://fuchsia.googlesource.com/third_party/rust-mirrors/rand"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"/>
+  </projects>
+</manifest>

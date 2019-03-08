@@ -1,0 +1,2 @@
+# manifest
+manifest for dahliaOS

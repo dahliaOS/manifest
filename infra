@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <projects>
+    <!-- Not importing the minimal one so that we can put this in a
+         sub-dir so that this can be imported into other manifests that
+         pull in manifest repos from multiple gerrit hosts. -->
+    <project name="manifest/fuchsia"
+             remote="https://fuchsia.googlesource.com/manifest"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/fuchsia/git-hooks"
+             path="manifest/fuchsia"/>
+    <!-- Name things <gerrit-host-prefix>-infra so that this can be imported
+         into other manifests that pull in infra repos from multiple hosts. -->
+    <project name="fuchsia-infra/legacy-infra"
+             path="fuchsia-infra/legacy-infra"
+             remote="https://fuchsia.googlesource.com/infra"
+             gerrithost="https://fuchsia-review.googlesource.com"/>
+    <project name="fuchsia-infra/infra"
+             path="fuchsia-infra/go/src/fuchsia.googlesource.com/infra/infra"
+             remote="https://fuchsia.googlesource.com/infra/infra"
+             gerrithost="https://fuchsia-review.googlesource.com"/>
+    <project name="fuchsia-infra/config"
+             path="fuchsia-infra/config"
+             remote="https://fuchsia.googlesource.com/infra/config"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/fuchsia/infra-git-hooks"/>
+    <project name="fuchsia-infra/prebuilt"
+             path="fuchsia-infra/prebuilt"
+             remote="https://fuchsia.googlesource.com/infra/prebuilt"
+             gerrithost="https://fuchsia-review.googlesource.com"/>
+    <project name="fuchsia-infra/recipes"
+             path="fuchsia-infra/recipes"
+             remote="https://fuchsia.googlesource.com/infra/recipes"
+             gerrithost="https://fuchsia-review.googlesource.com"/>
+  </projects>
+  <hooks>
+    <hook name="update-prebuilt"
+          project="fuchsia-infra/prebuilt"
+          action="update.sh"/>
+  </hooks>
+</manifest>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <imports>
+    <localimport file="minimal"/>
+    <import remote="https://fuchsia.googlesource.com/zircon"
+            manifest="manifest/zircon"
+            name="zircon"/>
+  </imports>
+  <projects>
+    <project name="third_party/llvm"
+             remote="https://fuchsia.googlesource.com/third_party/llvm"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             path="third_party/llvm-project/llvm"/>
+    <project name="third_party/clang"
+             remote="https://fuchsia.googlesource.com/third_party/clang"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             path="third_party/llvm-project/clang"/>
+    <project name="third_party/clang-tools-extra"
+             remote="https://fuchsia.googlesource.com/third_party/clang-tools-extra"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             path="third_party/llvm-project/clang-tools-extra"/>
+    <project name="third_party/lld"
+             remote="https://fuchsia.googlesource.com/third_party/lld"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             path="third_party/llvm-project/lld"/>
+    <project name="third_party/compiler-rt"
+             remote="https://fuchsia.googlesource.com/third_party/compiler-rt"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             path="third_party/llvm-project/compiler-rt"/>
+    <project name="third_party/libcxx"
+             remote="https://fuchsia.googlesource.com/third_party/libcxx"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             path="third_party/llvm-project/libcxx"/>
+    <project name="third_party/libcxxabi"
+             remote="https://fuchsia.googlesource.com/third_party/libcxxabi"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             path="third_party/llvm-project/libcxxabi"/>
+    <project name="third_party/libunwind"
+             remote="https://fuchsia.googlesource.com/third_party/libunwind"
+             gerrithost="https://fuchsia-review.googlesource.com"
+             githooks="manifest/git-hooks"
+             path="third_party/llvm-project/libunwind"/>
+  </projects>
+</manifest>

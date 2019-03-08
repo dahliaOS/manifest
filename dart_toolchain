@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <imports>
+    <localimport file="minimal"/>
+  </imports>
+  <projects>
+    <project name="depot_tools"
+             remote="https://chromium.googlesource.com/chromium/tools/depot_tools"
+             gerrithost="https://chromium-review.googlesource.com"
+             path="depot_tools"/>
+    <project name="dart/sdk"
+             remote="https://dart.googlesource.com/sdk"
+             gerrithost="https://dart-review.googlesource.com"
+             path="dart/sdk"/>
+  </projects>
+</manifest>

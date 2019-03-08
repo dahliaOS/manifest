@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o pipefail
+
+# Updates generated configs if source configs have been modified.
+
+generated_file() {
+  echo "${1}" | sed "s:services/\(cr-buildbucket.*\.cfg\):services/generated/\1:"
+}
+
+# Assume directory layout as created by infra manifest, and CWD is inside a
+# config dir, like fuchsia-infra/config.
+TOOLS_DIR="../../fuchsia-infra/prebuilt/tools"
+FLATTEN_TOOL="${TOOLS_DIR}/flatten_buildbucket_cfg/flatten_buildbucket_cfg"
+if [[ ! -f "${FLATTEN_TOOL}" ]]; then
+  echo "Expected the following path to be a regular file, but it's not: ${FLATTEN_TOOL}"
+  exit 1
+fi
+
+VPYTHON="${TOOLS_DIR}/vpython"
+if [[ ! -x "${VPYTHON}" ]]; then
+  echo "Expected the following path to be an executable file, but it's not: ${VPYTHON}"
+  exit 1
+fi
+
+# STATUS_FILES is an array where each element is:
+# "STATUS FILE_PATH", where STATUS is one of the args to --diff-filter.
+# https://git-scm.com/docs/git-diff#git-diff---diff-filterACDMRTUXB82308203
+mapfile -t STATUS_FILES < <(git diff --cached --name-status --diff-filter=AMDR)
+
+for STATUS_FILE in "${STATUS_FILES[@]}"; do
+  # Split "STATUS FILE_PATH" into an array of >= 2 elements.
+  read -r -a STATUS_FILE_ARR <<< ${STATUS_FILE}
+  STATUS=${STATUS_FILE_ARR[0]}
+  FILE=${STATUS_FILE_ARR[1]}
+  if [[ "${FILE}" == services/cr-buildbucket*.cfg ]]; then
+    GENERATED_FILE=$(generated_file ${FILE})
+    if [[ "${STATUS}" == D && -e "${GENERATED_FILE}" ]]; then
+      rm "${GENERATED_FILE}"
+      git add "${GENERATED_FILE}"
+    elif [[ "${STATUS}" == R* ]]; then
+      [[ -e "${GENERATED_FILE}" ]] && git rm "${GENERATED_FILE}"
+      # If it's a rename, STATUS_FILE_ARR should have a 3rd element:
+      # the new name of the file.
+      # Proceed as if we're adding the new name of the file.
+      FILE=${STATUS_FILE_ARR[2]}
+      GENERATED_FILE=$(generated_file ${FILE})
+      STATUS="A"
+    fi
+    if [[ "${STATUS}" =~ [AM] ]]; then
+      mkdir -p $(dirname "${GENERATED_FILE}")
+      "${VPYTHON}" "${FLATTEN_TOOL}" "${FILE}" > "${GENERATED_FILE}"
+      git add "${GENERATED_FILE}"
+    fi
+  fi
+done
