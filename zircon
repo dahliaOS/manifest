@@ -2,7 +2,7 @@
 <manifest>
   <imports>
     <localimport file="minimal"/>
-    <import remote="https://fuchsia.googlesource.com/zircon"
+    <import remote="https://github.com/dahlia-os/zircon"
             manifest="manifest/zircon"
             name="zircon"/>
   </imports>
