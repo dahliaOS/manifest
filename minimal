@@ -2,7 +2,7 @@
 <manifest>
   <projects>
     <project name="manifest"
-             remote="https://fuchsia.googlesource.com/manifest"
+             remote="https://github.com/dahlia-os/manifest"
              gerrithost="https://fuchsia-review.googlesource.com"
              githooks="manifest/git-hooks"
              path="manifest"/>
