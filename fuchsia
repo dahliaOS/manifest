@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <imports>
-    <import remote="https://fuchsia.googlesource.com/topaz"
+    <import remote="github.com/dahlia-os/topaz"
             manifest="manifest/topaz"
             name="topaz"/>
   </imports>
