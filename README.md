@@ -1,2 +1,2 @@
 # manifest
-manifest for dahliaOS
+manifest for dahlia
