@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <projects>
-    <project name="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"
-             path="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"
+    <project name="vendor/dahlia/pangolin-desktop"
+             path="vendor/dahlia/pangolin-desktop"
              remote="https://github.com/dahlia-os/pangolin-desktop.git"/>
 
   </projects>
