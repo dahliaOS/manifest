@@ -1,1 +1,7 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <imports>
+    <import remote="https://github.com/dahlia-os/pangolin-desktop.git"
+            name="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"/>
+  </imports>
+</manifest>
