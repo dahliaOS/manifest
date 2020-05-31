@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <imports>
-    <import remote="https://github.com/dahlia-os/pangolin-desktop.git"
-            name="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"/>
+    <localimport file="minimal"/>
   </imports>
+  <projects>
+    <project name="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"
+             path="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"
+             githooks="manifest/git-hooks"
+             remote="https://github.com/dahlia-os/pangolin-desktop.git"/>
+
+  </projects>
 </manifest>
