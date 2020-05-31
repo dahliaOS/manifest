@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <imports>
-    <localimport file="minimal"/>
-  </imports>
   <projects>
     <project name="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"
              path="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"
