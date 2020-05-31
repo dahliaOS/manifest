@@ -3,7 +3,6 @@
   <projects>
     <project name="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"
              path="vendor/dahlia/src/experiences/session_shells/pangolin-desktop"
-             githooks="manifest/git-hooks"
              remote="https://github.com/dahlia-os/pangolin-desktop.git"/>
 
   </projects>
