@@ -11,4 +11,14 @@ gnu-coreutils: builds gnu-coreutils with fuchsia
 
 pangolin-mobile: build pangolin-mobile with fuchsia
 
-You are able to feed these files to jiri with `jiri import` or `jiri manifest`
+Your .jiri_manifest file should look like this (example).
+
+```
+<manifest>
+  <imports>
+    <import manifest="flower" name="integration" remote="https://fuchsia.googlesource.com/integration"/>
+    <import manifest="pangolin-desktop" name="pangolin-desktop" remote="https://github.com/dahlia-os/manifest"/>
+  </imports>
+</manifest>
+
+```
