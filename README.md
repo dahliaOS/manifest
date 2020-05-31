@@ -10,3 +10,5 @@ pangolin-desktop: builds pangolin-desktop with fuchsia
 gnu-coreutils: builds gnu-coreutils with fuchsia
 
 pangolin-mobile: build pangolin-mobile with fuchsia
+
+You are able to feed these files to jiri with `jiri import`
