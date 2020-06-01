@@ -4,6 +4,9 @@
     <project name="vendor/dahlia/pangolin-desktop"
              path="vendor/dahlia/pangolin-desktop"
              remote="https://github.com/dahlia-os/pangolin-desktop.git"/>
+    <project name="vendor/dahlia/products"
+             path="vendor/dahlia/products"
+             remote="https://github.com/dahlia-os/dahlia-os-build.git"/>
 
   </projects>
 </manifest>
