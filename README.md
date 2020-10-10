@@ -6,8 +6,6 @@
 <a href="https://github.com/dahlia-os/documentation">Documentation</a>
 
 # Manifest
-![GitHub issues](https://img.shields.io/github/issues/dahlia-os/prickle-emulator?color=brightgreen)
-![GitHub](https://img.shields.io/github/license/dahlia-os/prickle-emulator?color=bright-green)
 
 Manifests to build dahliaOS on top of Fuchsia OS
 
