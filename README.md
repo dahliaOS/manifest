@@ -28,5 +28,4 @@ Your .jiri_manifest file should look like this example:
     <import manifest="pangolin-desktop" name="pangolin-desktop" remote="https://github.com/dahlia-os/manifest"/>
   </imports>
 </manifest>
-
 ```
